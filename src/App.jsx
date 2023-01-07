@@ -3,7 +3,10 @@ import Hero from './components/Hero/Hero';
 
 const App = () => {
   return (
-    <Hero/>
+    <div className="App">
+      <Hero/>
+    </div>
+    
   );
 }
 
