@@ -28,3 +28,16 @@
   -webkit-text-stroke-color: #fff;
   -webkit-text-stroke-width: 1px;
 }
+
+.btn{
+  padding: 0.5rem;
+  font-weight: bold;
+  background-color: white;
+  border: 3px solid transparent;
+  transition: 300ms all;
+}
+
+.btn:hover{
+  cursor: pointer;
+  
+}
