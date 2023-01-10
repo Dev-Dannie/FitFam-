@@ -16,11 +16,24 @@ justify-content: center;
 color: white;
 text-transform: uppercase;
 font-style: italic;
+
+@media screen and (max-width: 768px){
+   flex-direction: column;
+   gap: 1rem;
+   font-size: x-large;
+   align-items: center;
+   justify-content: center;
+   margin-top: 2rem;
+}
 `
 
 export const ProgramsCategories = styled.div`
 display:flex;
 gap:1rem;
+
+@media screen and (max-width: 768px){
+   flex-direction: column;
+}
 `
 
 export const Category = styled.div`

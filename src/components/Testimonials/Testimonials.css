@@ -15,3 +15,30 @@
     letter-spacing: 2px;
     line-height: 40px;
 }
+
+.right-t-border{
+position: absolute;
+width: 17rem;
+height: 20rem;
+border: 2px solid orange;
+right: 9rem;
+top: 0.9rem
+}
+
+.right-t-gradient{
+position:absolute;
+width:17rem;
+height:19rem;
+right:7rem;
+top:4rem;
+background: var(--planCard)
+}
+
+.right-img{
+position: absolute;
+width:17rem;
+height:20rem;
+object-fit: cover;
+right:8rem;
+top:2rem
+}

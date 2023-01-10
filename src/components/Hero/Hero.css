@@ -1,0 +1,56 @@
+.best-ad-div{
+    position: absolute;
+    background-color: var(--orange);
+    width: 5.4rem;
+    height:  80%;
+    left: 8px;
+    border-radius: 3rem;
+    z-index: 1;
+}
+
+
+.heart-rate-div{
+display:flex;
+flex-direction: column;
+gap:1rem;
+background-color: var(--darkGrey);
+width: fit-content;
+padding: 1rem;
+align-items: start;
+border-radius: 5px;
+position: absolute;
+right: 4rem;
+top: 7rem
+}
+
+.hero-img-back{
+    position:absolute;
+top: 4rem;
+right: 20rem;
+z-index: -1;
+width: 15rem;
+}
+
+.hero-text{
+display:flex;
+flex-direction: column;
+gap: 1.5rem;
+text-transform: uppercase;
+font-size: 4.5rem;
+font-weight: bold;
+color: white;
+text-overflow: inherit;
+}
+
+@media screen and (max-width: 768px){
+   .heart-rate-div{
+    left: 1rem;
+    top: 2rem;
+   }
+
+   .hero-img-back{
+    width: 15rem;
+    left: 2rem;
+    top: 0rem;
+   }
+}

@@ -4,13 +4,20 @@ import Heart from '../../assets/heart.png';
 import calories from '../../assets/calories.png';
 import hero_image from '../../assets/hero_image.png';
 import hero_image_back from '../../assets/hero_image_back.png';
-import { HeroSection, HeroLeft, HeroRight, BestAd, BestAdDiv,
+import {motion} from 'framer-motion';
+import './Hero.css';
+import { HeroSection, HeroLeft, HeroRight, BestAd,
    BestAdSpan, HeroText, ThirdDiv, FiguresDiv, 
    Figures, FiguresSpan1, FiguresSpan2, Buttons, 
-   Button1, Button2, HeartRateDiv, HRBtn, HRSpan1, 
-   HRSpan2, HeroImg, HeroImgBack, CaloriesImg, CaloriesDiv, CaloriesSpan1, CaloriesSpan2, Calory, BlurEffect} from './HeroStyles';
+   Button1, Button2, HRBtn, HRSpan1, 
+   HRSpan2, HeroImg,  CaloriesImg, CaloriesDiv, CaloriesSpan1, CaloriesSpan2, Calory, BlurEffect} from './HeroStyles';
 
 const Hero = () => {
+
+  const transition = {type: 'spring', duration: 3}
+  const mobile = window.innerWidth<=768 ? true : false;
+
+
   return (
     <HeroSection>
       <BlurEffect className='blur'></BlurEffect>
@@ -18,7 +25,13 @@ const Hero = () => {
         <HeroLeft>
             <Header />
             <BestAd>
-              <BestAdDiv></BestAdDiv>
+              <motion.div
+              initial= {{left: mobile ? '165px' : '238px'}}
+              whileInView={{left: '8px'}}
+              transition = {{...transition, type: 'tween'}}
+
+              className= 'best-ad-div'
+              ></motion.div>
               <BestAdSpan>The best fitness gym in town</BestAdSpan>
             </BestAd>
 
@@ -33,8 +46,9 @@ const Hero = () => {
               </div>
 
             <ThirdDiv>
-              <span>
-                We will help you to shape and build your ideal body goals.
+              <span className='third-div'>
+                We will help you to shape/build your ideal body goals 
+                and live your life to the fullest.
               </span>
             </ThirdDiv>
             </HeroText>
@@ -66,14 +80,22 @@ const Hero = () => {
         <HeroRight>
           <HRBtn className='btn'>Join Now</HRBtn>
 
-          <HeartRateDiv>
+          <motion.div 
+          initial= {{right: '-1rem'}}
+          whileInView= {{right: '4rem'}}
+          transition = {transition}
+          className='heart-rate-div'>
             <img src={Heart} alt='' />
             <HRSpan1>Heart Rate</HRSpan1>
             <HRSpan2>120 bpm</HRSpan2>
-          </HeartRateDiv>
+          </motion.div>
 
           <HeroImg src={hero_image} alt= ''/>
-          <HeroImgBack src={hero_image_back}/>
+          <motion.img 
+          initial= {{right: '10rem'}}
+          whileInView={{right:'20rem'}}
+          transition={transition}
+          src={hero_image_back} className='hero-img-back'/>
 
           <Calory>
             <CaloriesImg src={calories} alt='' />

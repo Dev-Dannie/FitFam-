@@ -1,5 +1,5 @@
 import React from 'react';
-import { FooterC, FooterHR, FooterSection, SocialLinks, SocialsImg } from './FooterStyles';
+import { BlurDiv1, BlurDiv2, FooterC, FooterHR, FooterSection, SocialLinks, SocialsImg } from './FooterStyles';
 import Github from '../../assets/github.png';
 import Instagram from '../../assets/instagram.png';
 import LinkedIn from '../../assets/linkedin.png';
@@ -9,6 +9,7 @@ const Footer = () => {
   return (
     <FooterSection>
         <FooterHR />
+
         <FooterC>
             <SocialLinks>
                 <SocialsImg src={Github} alt=''/>
@@ -16,6 +17,9 @@ const Footer = () => {
                 <SocialsImg src={LinkedIn} alt=''/>
             </SocialLinks>
         </FooterC>
+
+        <BlurDiv1 className="blur"></BlurDiv1>
+        <BlurDiv2 className="blur blurf2"></BlurDiv2>
     </FooterSection>
   )
 }
