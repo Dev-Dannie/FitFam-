@@ -180,3 +180,9 @@ export const CaloriesSpan2 = styled.span`
 color:white;
 font-size: 1.5rem
 `
+
+export const BlurEffect = styled.div`
+width: 22rem;
+height: 30rem;
+left: 0;
+`

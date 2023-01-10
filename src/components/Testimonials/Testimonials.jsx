@@ -11,7 +11,7 @@ const Testimonials = () => {
 
     const [selected, setSelected] = useState(0);
     const tLength = testimonialsData.length
-    console.log(tLength)
+   
   return (
     <TestimonialsSection>
         <LeftT className='left-t'>

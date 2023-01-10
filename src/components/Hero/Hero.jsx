@@ -8,11 +8,13 @@ import { HeroSection, HeroLeft, HeroRight, BestAd, BestAdDiv,
    BestAdSpan, HeroText, ThirdDiv, FiguresDiv, 
    Figures, FiguresSpan1, FiguresSpan2, Buttons, 
    Button1, Button2, HeartRateDiv, HRBtn, HRSpan1, 
-   HRSpan2, HeroImg, HeroImgBack, CaloriesImg, CaloriesDiv, CaloriesSpan1, CaloriesSpan2, Calory} from './HeroStyles';
+   HRSpan2, HeroImg, HeroImgBack, CaloriesImg, CaloriesDiv, CaloriesSpan1, CaloriesSpan2, Calory, BlurEffect} from './HeroStyles';
 
 const Hero = () => {
   return (
     <HeroSection>
+      <BlurEffect className='blur'></BlurEffect>
+
         <HeroLeft>
             <Header />
             <BestAd>

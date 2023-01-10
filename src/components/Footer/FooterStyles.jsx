@@ -15,7 +15,7 @@ flex-direction;
 gap:4rem;
 align-items: center;
 justify-content: center;
-height: 20rem;
+height: 10rem;
 `
 
 export const SocialLinks = styled.div`
