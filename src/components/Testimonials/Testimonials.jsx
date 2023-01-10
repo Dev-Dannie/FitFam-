@@ -16,7 +16,7 @@ const Testimonials = () => {
     <TestimonialsSection>
         <LeftT className='left-t'>
             <span>Testimonials</span>
-            <span className='stroke-text'>What they</span>
+            <span className='stroke-text'>What clients</span>
             <span>say about us</span>
 
             <span>
