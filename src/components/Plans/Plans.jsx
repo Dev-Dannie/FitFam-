@@ -1,7 +1,8 @@
 import React from 'react';
 import {plansData} from '../../data/plansData';
 import { Feature, FeatureImg, Features, FeatureSpan, Plan, PlansContainer, PlansSection, } from './PlansStyles';
-import { ProgramsHeader} from '../Programs/ProgramsStyles'
+import { ProgramsHeader} from '../Programs/ProgramsStyles';
+import './Plans.css'
 import whiteTick from '../../assets/whiteTick.png'
 
 const Plans = () => {
@@ -15,12 +16,12 @@ const Plans = () => {
 
         {/* plans card */}
 
-        <PlansSection>
+        <PlansSection className='plans'>
             {plansData.map((plan, i) => (
                 <Plan className='plan'>
                     {plan.icon}
                     <span>{plan.name}</span>
-                    <span>{plan.price}</span>
+                    <span>$ {plan.price}</span>
 
                     <Features>
                         {plan.features.map((feature, i) => (

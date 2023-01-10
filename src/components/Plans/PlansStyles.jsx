@@ -28,13 +28,17 @@ width:15rem
 `
 
 export const Features = styled.div`
-
+display:flex;
+flex-direction:column;
+gap:1rem
 `
 export const Feature = styled.div`
-
+display:flex;
+align-items:center;
+gap:1rem
 `
 export const FeatureImg = styled.img`
-
+width:1rem;
 `
 export const FeatureSpan = styled.span`
 
