@@ -42,3 +42,28 @@ object-fit: cover;
 right:8rem;
 top:2rem
 }
+
+@media screen and (max-width: 768px){
+    .left-t>:nth-child(2),
+    .left-t>:nth-child(3){
+        font-size: xx-large;
+    }
+
+    .right-t-border{
+        position: relative;
+        display: none;
+    }
+
+    .right-t-gradient{
+        position: relative;
+        display: none;
+    }
+
+    .right-img{
+        top: 0;
+        right: 0;
+        position: relative;
+        align-self: center;
+    }
+}
+

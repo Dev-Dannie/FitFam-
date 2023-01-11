@@ -4,6 +4,11 @@ export const JoinSection = styled.div`
 display:flex;
 padding:0 2rem;
 gap: 10rem;
+
+@media screen and (max-width: 768px){
+   flex-direction: column;
+   gap: 1rem;
+}
 `
 
 export const LeftJ = styled.div`
@@ -12,6 +17,11 @@ font-size: 3rem;
 font-weight:bold;
 text-transform:uppercase;
 position: relative;
+
+@media screen and (max-width: 768px){
+   font-size: x-large;
+   flex-direction: column;
+}
 `
 
 export const LeftJHR = styled.hr`
@@ -31,6 +41,10 @@ export const RightJ = styled.div`
 display:flex;
 justify-content:center;
 align-items:flex-end;
+
+@media screen and (max-width: 768px){
+   padding: 2rem;
+}
 `
 
 export const EmailContainer = styled.form`

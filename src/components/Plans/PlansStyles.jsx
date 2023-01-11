@@ -15,6 +15,10 @@ display:flex;
 justify-content:center;
 align-items:center;
 gap:3rem;
+
+@media screen and (max-width: 768px){
+   flex-direction: column;
+}
 `
 
 export const Plan = styled.div`
