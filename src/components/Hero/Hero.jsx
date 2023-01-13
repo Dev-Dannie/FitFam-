@@ -6,14 +6,16 @@ import hero_image from '../../assets/hero_image.png';
 import hero_image_back from '../../assets/hero_image_back.png';
 import {motion} from 'framer-motion';
 import './Hero.css';
+import { variants } from '../variants/variants';
 import NumberCounter from 'number-counter';
 import { HeroSection, HeroLeft, HeroRight, BestAd,
    BestAdSpan, HeroText, ThirdDiv, FiguresDiv, 
    Figures, FiguresSpan1, FiguresSpan2, Buttons, 
    Button1, Button2, HRBtn, HRSpan1, 
-   HRSpan2, HeroImg,  CaloriesImg, CaloriesDiv, CaloriesSpan1, CaloriesSpan2, Calory, BlurEffect} from './HeroStyles';
+   HRSpan2, HeroImg,  CaloriesImg, CaloriesDiv, CaloriesSpan1, 
+   CaloriesSpan2, Calory, BlurEffect} from './HeroStyles';
 
-   import App from '../../App';
+ 
 const Hero = () => {
 
   const transition = {type: 'spring', duration: 3}
@@ -37,7 +39,12 @@ const Hero = () => {
               <BestAdSpan>The best fitness gym in town</BestAdSpan>
             </BestAd>
 
-            <HeroText className='hero-text'>
+            <motion.div 
+            variants={variants.fadeUpDelay}
+            initial= 'hidden'
+            whileInView='visible'
+            
+            className='hero-text'>
               <div>
                 <span className='stroke-text'>Shape </span>
                 <span className='your'>Your</span>
@@ -48,14 +55,18 @@ const Hero = () => {
               </div>
 
             <ThirdDiv>
-              <span >
+              <span>
                 We will help you to shape and build your ideal body goals 
                 and live your life to the fullest.
               </span>
             </ThirdDiv>
-            </HeroText>
+            </motion.div>
 
-            <Figures>
+            <motion.div 
+              variants={variants.fadeDown}
+              initial= 'hidden'
+              whileInView='visible'
+            className='figures'>
               <FiguresDiv>
                 <FiguresSpan1>
                   <NumberCounter className='number' end={96} start={76} delay='4' preFix= '+'/>
@@ -76,12 +87,16 @@ const Hero = () => {
                 </FiguresSpan1>
                 <FiguresSpan2>fitness programs</FiguresSpan2>
               </FiguresDiv>
-            </Figures>
+            </motion.div>
 
-            <Buttons>
+            <motion.div className='buttons'
+            variants={variants.fadeDown}
+            initial= 'hidden'
+            whileInView='visible'
+            >
               <Button1 className="btn">Get Started</Button1>
               <Button2 className="btn learn">Learn More</Button2>
-            </Buttons>
+            </motion.div>
         </HeroLeft>
 
 

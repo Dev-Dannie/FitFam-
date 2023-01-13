@@ -8,19 +8,30 @@ import nb from '../../assets/nb.png';
 import adidas from '../../assets/adidas.png';
 import nike from '../../assets/nike.png';
 import tick from '../../assets/tick.png';
-import './Reasons.css'
+import './Reasons.css';
+import {motion} from 'framer-motion';
+import { variants } from '../variants/variants';
 
 const Reasons = () => {
   return (
     <ReasonsSection id='reasons'>
-        <LeftReasons>
+        <motion.div 
+        className='left-reasons'
+        variants={variants.fadeDown}
+        initial= 'hidden'
+        whileInView='visible'
+        >
             <LeftReasonsImg1 src={image1} alt=''/>        
             <LeftReasonsImg2 src={image2} alt=''/>
             <LeftReasonsImg3 src={image3} alt=''/>
             <LeftReasonsImg4 src={image4} alt=''/>
-        </LeftReasons>
+        </motion.div>
 
-        <RightReasons>
+        <motion.div 
+        className='right-reasons'
+        variants={variants.fadeUp}
+        initial= 'hidden'
+        whileInView='visible'>
             <RRSpan>some reasons</RRSpan>
 
             <RRDiv className="">
@@ -56,7 +67,7 @@ const Reasons = () => {
                 <PartnersImg src={adidas} alt=''/>
                 <PartnersImg src={nike} alt=''/>
             </PartnersDiv>
-        </RightReasons>
+        </motion.div >
     </ReasonsSection>
   )
 }

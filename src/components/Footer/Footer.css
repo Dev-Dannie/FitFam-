@@ -1,0 +1,9 @@
+.footer-c{
+padding: 1rem 2rem;
+display: flex;
+flex-direction;
+gap:4rem;
+align-items: center;
+justify-content: center;
+height: 10rem;
+}

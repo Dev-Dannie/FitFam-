@@ -1,8 +1,10 @@
 import React from 'react';
 import {plansData} from '../../data/plansData';
-import { Feature, FeatureImg, Features, FeatureSpan, Plan, PlansContainer, PlansSection, } from './PlansStyles';
-import { ProgramsHeader} from '../Programs/ProgramsStyles';
-import './Plans.css'
+import { Feature, FeatureImg, Features, FeatureSpan, Plan, PlansContainer, } from './PlansStyles';
+// import { ProgramsHeader} from '../Programs/ProgramsStyles';
+import './Plans.css';
+import {motion} from 'framer-motion';
+import { variants } from '../variants/variants';
 import whiteTick from '../../assets/whiteTick.png'
 
 const Plans = () => {
@@ -10,15 +12,23 @@ const Plans = () => {
    <PlansContainer id='plans'>
     <div className="blur plans-blur-1"></div>
     <div className="blur plans-blur-2"></div>
-        <ProgramsHeader>
+        <motion.div className='plans-header'
+        variants={variants.fadeDown}
+        initial= 'hidden'
+        whileInView='visible'
+        >
             <span className='stroke-text'>READY TO START</span>
             <span style={{color: 'var(--orange)'}}>YOUR JOURNEY</span>
             <span className='stroke-text'>NOW WITH US</span>
-        </ProgramsHeader>
+        </motion.div>
 
         {/* plans card */}
 
-        <PlansSection className='plans'>
+        <motion.div 
+        variants={variants.fadeUpDelay}
+        initial= 'hidden'
+        whileInView='visible'
+        className='plans'>
             {plansData.map((plan, i) => (
                 <Plan className='plan'>
                     {plan.icon}
@@ -40,7 +50,7 @@ const Plans = () => {
                     <button className='btn'>Join Now</button>
                 </Plan>
             ))}
-        </PlansSection>
+        </motion.div>
    </PlansContainer>
     )
 }

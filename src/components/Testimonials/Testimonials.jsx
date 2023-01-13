@@ -5,6 +5,7 @@ import {testimonialsData} from '../../data/testimonialsData';
 import leftArrow from '../../assets/leftArrow.png';
 import rightArrow from '../../assets/rightArrow.png';
 import {AnimatePresence, motion} from 'framer-motion';
+import { variants } from '../variants/variants';
 
 
 
@@ -17,7 +18,11 @@ const Testimonials = () => {
   
     return (
     <TestimonialsSection id='testimonials'>
-        <LeftT className='left-t'>
+        <motion.div 
+        variants={variants.fadeInLeft}
+        initial= 'hidden'
+        whileInView='visible'
+        className='left-t'>
             <span>Testimonials</span>
             <span className='stroke-text'>What clients</span>
             <span style={{color: 'var(--orange)'}}>say about us</span>
@@ -41,7 +46,7 @@ const Testimonials = () => {
                    - {testimonialsData[selected].status}
                     </span>
             </span>
-        </LeftT>
+        </motion.div>
 
         <RightT>
             <motion.div 

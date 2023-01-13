@@ -2,6 +2,8 @@ import React, {useRef} from 'react'
 import { EmailContainer, EmailInput, JBtn, JoinSection, LeftJ, LeftJHR, RightJ } from './JoinStyles'
 import './Join.css';
 import emailjs from '@emailjs/browser';
+import { motion} from 'framer-motion';
+import { variants } from '../variants/variants';
 
 const Join = () => {
 
@@ -21,7 +23,11 @@ const Join = () => {
 
   return (
     <JoinSection id='join'>
-        <LeftJ>
+        <motion.div className='left-j'
+         variants={variants.fadeInLeft}
+         initial= 'hidden'
+         whileInView='visible'
+        >
             <LeftJHR />
             <div>
                 <span className="stroke-text"> READY TO</span>
@@ -32,15 +38,18 @@ const Join = () => {
                 <span style={{color: 'var(--orange)'}}>YOUR BODY</span>
                 <span style={{color: 'var(--orange)'}}> WITH US?</span>
             </div>
-        </LeftJ>
+        </motion.div>
 
-        <RightJ>
+        <motion.div className='right-j'
+         variants={variants.fadeInRight}
+         initial= 'hidden'
+         whileInView='visible'>
             <EmailContainer ref={form} onSubmit={sendEmail}>
                 <EmailInput type='email' name='user_email' 
                 placeholder='Enter your username'/>
                 <JBtn className='btn'>Join Now</JBtn>
             </EmailContainer>
-        </RightJ>
+        </motion.div>
     </JoinSection>
   )
 }

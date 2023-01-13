@@ -9,3 +9,26 @@
 #dark .reason-text{
     color: #fff;
 }
+
+.left-reasons{
+    display:grid;
+    flex: 1 1;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    grid-auto-rows: 1fr;
+}
+
+.right-reasons{
+    display: flex;
+    flex-direction:column;
+    gap:1rem;
+    text-transform:uppercase;
+    flex: 1 1;
+}
+
+@media screen and (max-width: 768px){
+   .left-reasons{ 
+    grid-auto-rows: auto;
+    overflow: hidden;
+    }
+ }

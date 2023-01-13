@@ -33,7 +33,14 @@ width: 15rem;
 
 .hero-text
 {
-
+    display:flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    text-transform: uppercase;
+    font-size: 4.5rem;
+    font-weight: bold;
+    
+    text-overflow: inherit;
 color: var(--darkGrey);
 
 }
@@ -67,6 +74,16 @@ color: var(--darkGrey);
     color: #fff;
 }
 
+.figures{
+    display: flex;
+    gap: 2rem;
+}
+
+.buttons{
+    display:flex;
+    gap:1rem;
+    font-weight:normal;
+}
 
 @media screen and (max-width: 768px){
    .heart-rate-div{
@@ -78,5 +95,13 @@ color: var(--darkGrey);
     width: 15rem;
     left: 2rem;
     top: 0rem;
+   }
+
+   .hero-text{
+    font-size: xx-large; 
+   }
+
+   .buttons{
+    justify-content: center;
    }
 }

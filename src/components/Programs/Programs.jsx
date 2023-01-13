@@ -1,19 +1,30 @@
 import React from 'react'
-import { Category, CategoryImg, CategorySpan1, CategorySpan2, JoinNow, JoinNowImg, ProgramsCategories, ProgramsHeader, ProgramsSection } from './ProgramsStyles';
+import { Category, CategoryImg, CategorySpan1, CategorySpan2, JoinNow, JoinNowImg,  ProgramsSection } from './ProgramsStyles';
 import {programsData} from '../../data/programsData';
 import RightArrow from '../../assets/rightArrow.png';
-import './Programs.css'
+import './Programs.css';
+import {motion} from 'framer-motion';
+import { variants } from '../variants/variants';
 
 const Programs = () => {
   return (
-    <ProgramsSection id='programs'>
-        <ProgramsHeader>
+    <ProgramsSection >
+        <motion.div 
+        className='programs-header'
+        variants={variants.fadeDown}
+        initial= 'hidden'
+        whileInView='visible'
+        >
             <span className='stroke-text'>Explore Our</span>
             <span style={{color: 'var(--orange)'}}>Programs</span>
             <span className='stroke-text'>to shape you</span>
-        </ProgramsHeader>
+        </motion.div>
 
-        <ProgramsCategories>
+        <motion.div 
+        className='programs-category'
+        variants={variants.fadeUpDelay}
+        initial= 'hidden'
+        whileInView='visible'>
             {programsData.map((program) => (
                 <Category className='category'>
                     <CategoryImg>{program.image} </CategoryImg>
@@ -24,7 +35,7 @@ const Programs = () => {
                     </JoinNow>
                 </Category>
             ))}
-        </ProgramsCategories>
+        </motion.div>
     </ProgramsSection>
   )
 }

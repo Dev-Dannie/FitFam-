@@ -1,3 +1,12 @@
+.left-t{
+display:flex;
+flex: 1 1;
+gap: 2rem;
+flex-direction: column;
+text-transform: uppercase;
+color: white
+}
+
 .left-t>:nth-child(1){
     color: var(--orange);
     font-weight: bold;
