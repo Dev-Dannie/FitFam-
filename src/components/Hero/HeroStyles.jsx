@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const HeroSection = styled.div`
     display: flex;
     justify-content: space-between;
+    position: relative;
 
     @media screen and (max-width: 768px){
      flex-direction: column;   
@@ -20,7 +21,7 @@ export const HeroLeft = styled.div`
 
 export const HeroRight = styled.div`
 position:relative;
-background-color: pink;
+background:  #8f0a7b;
 flex:1;
 
 @media screen and (max-width: 768px){
@@ -63,7 +64,7 @@ gap: 1.5rem;
 text-transform: uppercase;
 font-size: 4.5rem;
 font-weight: bold;
-color: white;
+
 text-overflow: inherit;
 
 @media screen and (max-width: 768px){
@@ -78,7 +79,7 @@ font-size: 1rem;
 font-weight: 200;
 text-transform: none;
 letter-spacing: 1px;
-width: 80%
+width: 70%
 
 @media screen and (max-width: 768px){
         font-size:small;
@@ -99,8 +100,12 @@ flex-direction: column;
 `
 
 export const FiguresSpan1 = styled.span`
-color: white;
+color: var(--darkGrey);
 font-size: 2rem;
+
+@media screen and (max-width: 768px){
+   font-size:1.5rem;
+}
 `
 
 export const FiguresSpan2 = styled.span`
@@ -119,9 +124,11 @@ font-weight:normal;
 `
 
 export const Button1 = styled.button`
-color:white;
+
 background-color: var(--orange);
 width: 8rem;
+border-top-left-radius: 30px;
+border-bottom-right-radius: 30px;
 
 @media screen and (max-width: 768px){
    font-size: large;
@@ -129,10 +136,12 @@ width: 8rem;
 `
 
 export const Button2 = styled.button`
-color:white;
+
 background-color: transparent;
 width: 8rem;
 border: 2px solid var(--orange);
+border-top-left-radius: 30px;
+border-bottom-right-radius: 20px;
 
 @media screen and (max-width: 768px){
    font-size: small;

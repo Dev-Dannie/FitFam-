@@ -1,0 +1,11 @@
+.category{
+    background-color: var(--darkGrey);
+}
+
+#light .category{
+    background-color: var(--darkGrey);
+}
+
+#dark .category{
+    background-color: rgb(58, 51, 51);
+}

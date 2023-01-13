@@ -39,7 +39,8 @@ gap:1rem;
 export const Category = styled.div`
 display:flex;
 flex-direction:column;
-background-color: gray;
+background-color: var(--darkGrey);
+border-radius: 5px;
 padding:2rem;
 gap:1rem;
 color:white;

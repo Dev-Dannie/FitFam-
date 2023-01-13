@@ -43,6 +43,23 @@ right:8rem;
 top:2rem
 }
 
+.review,
+.status{
+    color: var(--darkGrey);
+}
+
+#light
+.review,
+.status{
+    color: var(--darkGrey);
+}
+
+#dark
+.review,
+.status{
+    color: #fff;
+}
+
 @media screen and (max-width: 768px){
     .left-t>:nth-child(2),
     .left-t>:nth-child(3){

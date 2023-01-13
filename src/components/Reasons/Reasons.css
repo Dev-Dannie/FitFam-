@@ -1,0 +1,11 @@
+.reason-text{
+    color: var(--darkGrey);
+}
+
+#light .reason-text{
+    color: var(--darkGrey);
+}
+
+#dark .reason-text{
+    color: #fff;
+}

@@ -6,12 +6,14 @@ import hero_image from '../../assets/hero_image.png';
 import hero_image_back from '../../assets/hero_image_back.png';
 import {motion} from 'framer-motion';
 import './Hero.css';
+import NumberCounter from 'number-counter';
 import { HeroSection, HeroLeft, HeroRight, BestAd,
    BestAdSpan, HeroText, ThirdDiv, FiguresDiv, 
    Figures, FiguresSpan1, FiguresSpan2, Buttons, 
    Button1, Button2, HRBtn, HRSpan1, 
    HRSpan2, HeroImg,  CaloriesImg, CaloriesDiv, CaloriesSpan1, CaloriesSpan2, Calory, BlurEffect} from './HeroStyles';
 
+   import App from '../../App';
 const Hero = () => {
 
   const transition = {type: 'spring', duration: 3}
@@ -19,14 +21,14 @@ const Hero = () => {
 
 
   return (
-    <HeroSection>
+    <HeroSection id='home'>
       <BlurEffect className='blur'></BlurEffect>
-
+      
         <HeroLeft>
             <Header />
             <BestAd>
               <motion.div
-              initial= {{left: mobile ? '165px' : '238px'}}
+              initial= {{left: mobile ? '130px' : '180px'}}
               whileInView={{left: '8px'}}
               transition = {{...transition, type: 'tween'}}
 
@@ -35,19 +37,19 @@ const Hero = () => {
               <BestAdSpan>The best fitness gym in town</BestAdSpan>
             </BestAd>
 
-            <HeroText>
+            <HeroText className='hero-text'>
               <div>
                 <span className='stroke-text'>Shape </span>
-                <span>Your</span>
+                <span className='your'>Your</span>
               </div>
 
               <div>
-                <span>Ideal body</span>
+                <span className='body'>Ideal body</span>
               </div>
 
             <ThirdDiv>
-              <span className='third-div'>
-                We will help you to shape/build your ideal body goals 
+              <span >
+                We will help you to shape and build your ideal body goals 
                 and live your life to the fullest.
               </span>
             </ThirdDiv>
@@ -55,31 +57,37 @@ const Hero = () => {
 
             <Figures>
               <FiguresDiv>
-                <FiguresSpan1>86+</FiguresSpan1>
+                <FiguresSpan1>
+                  <NumberCounter className='number' end={96} start={76} delay='4' preFix= '+'/>
+                </FiguresSpan1>
                 <FiguresSpan2>expert coaches</FiguresSpan2>
               </FiguresDiv>
 
               <FiguresDiv>
-                <FiguresSpan1>630+</FiguresSpan1>
+                <FiguresSpan1>
+                <NumberCounter className='number' end={876} start={856} delay='4' preFix= '+'/> 
+                </FiguresSpan1>
                 <FiguresSpan2>members joined</FiguresSpan2>
               </FiguresDiv>
 
               <FiguresDiv>
-                <FiguresSpan1>50+</FiguresSpan1>
+                <FiguresSpan1>
+                <NumberCounter className='number' end={76} start={56} delay='4' preFix= '+'/>
+                </FiguresSpan1>
                 <FiguresSpan2>fitness programs</FiguresSpan2>
               </FiguresDiv>
             </Figures>
 
             <Buttons>
               <Button1 className="btn">Get Started</Button1>
-              <Button2 className="btn">Learn More</Button2>
+              <Button2 className="btn learn">Learn More</Button2>
             </Buttons>
         </HeroLeft>
 
 
         <HeroRight>
           <HRBtn className='btn'>Join Now</HRBtn>
-
+          
           <motion.div 
           initial= {{right: '-1rem'}}
           whileInView= {{right: '4rem'}}
@@ -100,7 +108,7 @@ const Hero = () => {
           <Calory>
             <CaloriesImg src={calories} alt='' />
             <CaloriesDiv>
-              <CaloriesSpan1>Calories Burned</CaloriesSpan1>
+              <CaloriesSpan1 style={{color: 'var(--darkGrey)'}}>Calories Burned</CaloriesSpan1>
               <CaloriesSpan2>180 kcal</CaloriesSpan2>
             </CaloriesDiv>
           </Calory>

@@ -8,10 +8,11 @@ import nb from '../../assets/nb.png';
 import adidas from '../../assets/adidas.png';
 import nike from '../../assets/nike.png';
 import tick from '../../assets/tick.png';
+import './Reasons.css'
 
 const Reasons = () => {
   return (
-    <ReasonsSection>
+    <ReasonsSection id='reasons'>
         <LeftReasons>
             <LeftReasonsImg1 src={image1} alt=''/>        
             <LeftReasonsImg2 src={image2} alt=''/>
@@ -24,25 +25,25 @@ const Reasons = () => {
 
             <RRDiv className="">
                 <span className='stroke-text'>why</span>
-                <span> choose us?</span>
+                <span style={{color: 'var(--orange)'}}> choose us?</span>
             </RRDiv>
 
             <RRDetails>
                 <DetailsDiv className="">
                     <DetailsImg src={tick} alt="" />
-                    <span>OVER 150+ EXPERT COACHES</span>
+                    <span className='reason-text'>OVER 150+ EXPERT COACHES</span>
                 </DetailsDiv>
                 <DetailsDiv className="">
                     <DetailsImg src={tick} alt="" />
-                    <span>TRAIN SMARTER AND FASTER THAN BEFORE</span>
+                    <span className='reason-text'>TRAIN SMARTER AND FASTER THAN BEFORE</span>
                 </DetailsDiv>
                 <DetailsDiv className="">
                     <DetailsImg src={tick} alt="" />
-                    <span>1 FREE PROGRAM FOR NEW MEMBERS</span>
+                    <span className='reason-text'>1 FREE PROGRAM FOR NEW MEMBERS</span>
                 </DetailsDiv>
                 <DetailsDiv className="">
                     <DetailsImg src={tick} alt="" />
-                    <span>RELIABLE PARTNERS</span>
+                    <span className='reason-text'>RELIABLE PARTNERS</span>
                 </DetailsDiv>
             </RRDetails>
 

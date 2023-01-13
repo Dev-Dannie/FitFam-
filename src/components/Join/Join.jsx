@@ -20,17 +20,17 @@ const Join = () => {
   
 
   return (
-    <JoinSection>
+    <JoinSection id='join'>
         <LeftJ>
             <LeftJHR />
             <div>
                 <span className="stroke-text"> READY TO</span>
-                <span> LEVEL UP </span>
+                <span style={{color: 'var(--orange)'}}> LEVEL UP </span>
             </div>
 
             <div >
-                <span>YOUR BODY</span>
-                <span> WITH US?</span>
+                <span style={{color: 'var(--orange)'}}>YOUR BODY</span>
+                <span style={{color: 'var(--orange)'}}> WITH US?</span>
             </div>
         </LeftJ>
 

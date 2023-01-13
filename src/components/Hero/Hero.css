@@ -31,16 +31,42 @@ z-index: -1;
 width: 15rem;
 }
 
-.hero-text{
-display:flex;
-flex-direction: column;
-gap: 1.5rem;
-text-transform: uppercase;
-font-size: 4.5rem;
-font-weight: bold;
-color: white;
-text-overflow: inherit;
+.hero-text
+{
+
+color: var(--darkGrey);
+
 }
+
+
+#light
+.hero-text,
+
+.number{
+    color: var(--darkGrey);
+}
+
+#dark
+.hero-text,
+.number
+{
+    color: #fff;
+}
+
+.learn{
+    color: var(--darkGrey);
+}
+
+#light
+.learn{
+    color: var(--darkGrey);
+}
+
+#dark
+.learn{
+    color: #fff;
+}
+
 
 @media screen and (max-width: 768px){
    .heart-rate-div{

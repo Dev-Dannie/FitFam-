@@ -4,7 +4,7 @@ import './Testimonials.css';
 import {testimonialsData} from '../../data/testimonialsData';
 import leftArrow from '../../assets/leftArrow.png';
 import rightArrow from '../../assets/rightArrow.png';
-import {motion} from 'framer-motion';
+import {AnimatePresence, motion} from 'framer-motion';
 
 
 
@@ -14,12 +14,13 @@ const Testimonials = () => {
     const tLength = testimonialsData.length;
 
     const transition = {type: 'spring', duration: 3};
-  return (
-    <TestimonialsSection>
+  
+    return (
+    <TestimonialsSection id='testimonials'>
         <LeftT className='left-t'>
             <span>Testimonials</span>
             <span className='stroke-text'>What clients</span>
-            <span>say about us</span>
+            <span style={{color: 'var(--orange)'}}>say about us</span>
 
             <motion.span
             key={selected}
@@ -27,6 +28,7 @@ const Testimonials = () => {
             animate={{opacity: 1, x: 0}}
             exit= {{opacity: 0, x: 100}}
             transition ={transition}
+            className='review'
             >
                 {testimonialsData[selected].review}
             </motion.span>
@@ -35,7 +37,9 @@ const Testimonials = () => {
                 <span style={{color: 'var(--orange)'}}>
                     {testimonialsData[selected].name}
                 </span>{' '}
-                - {testimonialsData[selected].status}
+                 <span className='status'>
+                   - {testimonialsData[selected].status}
+                    </span>
             </span>
         </LeftT>
 
@@ -52,7 +56,7 @@ const Testimonials = () => {
             transition= {{...transition, duration: 2}}
             className='right-t-gradient'></motion.div>
 
-            <motion.img 
+           <motion.img 
             key={selected}
             initial= {{opacity: 0, x: 100}}
             animate={{opacity: 1, x: 0}}
@@ -60,6 +64,7 @@ const Testimonials = () => {
             transition ={transition}
             className='right-img'
             src={testimonialsData[selected].image} alt=''/>
+
 
             <Arrows>
                 <ArrowImg src={leftArrow} alt=''

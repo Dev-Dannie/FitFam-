@@ -4,7 +4,7 @@
   }
   
 .plan>svg{
-    fill: var(--orange);
+    fill: var(--darkGrey);
     width: 2rem;
     height: 2rem;
   }
@@ -28,7 +28,7 @@
 }
 
 .plans>:nth-child(2)>button{
-    color: orange;
+    color: var(--darkGrey);
 }
 
 .plans-blur-1{
