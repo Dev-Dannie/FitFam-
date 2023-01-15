@@ -113,7 +113,12 @@ const Hero = () => {
             <HRSpan2>120 bpm</HRSpan2>
           </motion.div>
 
-          <HeroImg src={hero_image} alt= ''/>
+          <motion.img 
+          variants={variants.fadeInRight}
+          initial= 'hidden'
+          whileInView='visible'
+          className='hero-img' src={hero_image} alt= ''/>
+
           <motion.img 
           initial= {{right: '10rem'}}
           whileInView={{right:'20rem'}}

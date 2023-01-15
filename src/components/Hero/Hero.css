@@ -85,6 +85,13 @@ color: var(--darkGrey);
     font-weight:normal;
 }
 
+.hero-img{
+position: absolute;
+top:10rem;
+right: 8rem;
+width: 23rem;
+}
+
 @media screen and (max-width: 768px){
    .heart-rate-div{
     left: 1rem;
@@ -103,5 +110,13 @@ color: var(--darkGrey);
 
    .buttons{
     justify-content: center;
+   }
+
+   .hero-img{
+    position: relative;
+    width: 15rem;
+    left: 7rem;
+    top: 4rem;
+    align-self: center;
    }
 }

@@ -8,7 +8,7 @@ import { variants } from '../variants/variants';
 
 const Programs = () => {
   return (
-    <ProgramsSection >
+    <ProgramsSection id='programs'>
         <motion.div 
         className='programs-header'
         variants={variants.fadeDown}
